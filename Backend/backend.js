@@ -5,7 +5,7 @@ app.use(cors());
 app.use(express.json())
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://abhay1234:bUcZ2mcjfIITXnkZ@cluster1.l2dt7dg.mongodb.net/Cards-Assignment')
+mongoose.connect('mongodb+srv://abhay1234:bUcZ2mcjfIITXnkZ@cluster1.l2dt7dg.mongodb.net/?retryWrites=true&w=majority')
 
 const cardSchema = new mongoose.Schema({
     name:String,
