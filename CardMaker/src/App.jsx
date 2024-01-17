@@ -12,7 +12,7 @@ const [cardList,setCardList] = useState([])
 useEffect(()=>{
   const fetchdata = async () => {
   try{
-    const response = await axios.get('http://localhost:3001/cards')
+    const response = await axios.get('https://backend-server-for-createcard1.onrender.com/cards')
     setCardList(response.data)
   }catch(error){
     console.error(error);
@@ -25,7 +25,7 @@ fetchdata();
 
 const addCard = useCallback(async (formData) =>{
   try{
-    const response = await axios.post('http://localhost:3001/cards',formData)
+    const response = await axios.post('https://backend-server-for-createcard1.onrender.com/cards',formData)
     setCardList([...cardList,response.data])
   }catch(error){
     console.error(error)
